@@ -1,0 +1,25 @@
+{
+  "name": "@thijmenos/os-placeholder",
+  "version": "1.0.0",
+  "description": "a module for the thijmenos project",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "thijmenos"
+  ],
+  "author": "Thijmen Brand",
+  "license": "ISC",
+  "dependencies": {
+    "@thijmenos/common": "^2.0.3",
+    "@thijmenos/eslint-config": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
