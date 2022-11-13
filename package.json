@@ -1,6 +1,6 @@
 {
-  "name": "@thijmenos/os-placeholder",
-  "version": "1.0.0",
+  "name": "@thijmenos/prompt",
+  "version": "1.0.8",
   "description": "a module for the thijmenos project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,7 +17,9 @@
   "license": "ISC",
   "dependencies": {
     "@thijmenos/common": "^2.0.3",
-    "@thijmenos/eslint-config": "^1.0.0"
+    "@thijmenos/eslint-config": "^1.0.0",
+    "@thijmenos/graphics": "^1.0.4",
+    "@thijmenos/utils": "^1.0.0"
   },
   "devDependencies": {
     "typescript": "^4.8.4"
