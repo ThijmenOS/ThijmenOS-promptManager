@@ -6,4 +6,4 @@ on:
 
 jobs:
   publish:
-    uses: ThijmenOS/.github/publish-package/publish-action.yml
+    uses: thijmenos/.github/.github/workflows/publish-action.yml@main
