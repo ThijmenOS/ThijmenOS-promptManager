@@ -3,8 +3,8 @@ import {
   CreateElementFromString,
   GetElementByClass,
   InitMovement,
-} from "@thijmenos/graphics";
-import { GenerateUUID } from "@thijmenos/utils";
+} from "@thijmen-os/graphics";
+import { GenerateUUID } from "@thijmen-os/utils";
 import { promptSelectors, prompt } from "./defaults";
 
 class BasePrompt {

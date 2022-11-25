@@ -1,4 +1,4 @@
-import { CreateElementFromString } from "@thijmenos/graphics";
+import { CreateElementFromString } from "@thijmen-os/graphics";
 import BasePrompt from "../basePrompt";
 
 class ApplicationNotFound extends BasePrompt {

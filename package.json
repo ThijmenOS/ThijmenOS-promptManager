@@ -1,7 +1,7 @@
 {
   "name": "@thijmen-os/prompt",
   "version": "1.0.0",
-  "description": "a module for the thijmenos project",
+  "description": "a module for the thijmen-os project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,21 +12,21 @@
     "test": "jest --passWithNoTests"
   },
   "keywords": [
-    "thijmenos"
+    "thijmen-os"
   ],
   "author": "Thijmen Brand",
   "license": "ISC",
   "dependencies": {
-    "@thijmenos/common": "^2.0.3",
-    "@thijmenos/eslint-config": "^1.0.0",
-    "@thijmenos/graphics": "^1.0.4",
-    "@thijmenos/utils": "^1.0.0"
+    "@thijmen-os/common": "^1.0.2",
+    "@thijmen-os/eslint-config": "^1.0.0",
+    "@thijmen-os/graphics": "^1.0.1",
+    "@thijmen-os/utils": "^1.0.1"
   },
   "devDependencies": {
-    "typescript": "^4.8.4",
     "@types/jest": "^29.2.3",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
-    "ts-jest": "^29.0.3"
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
   }
 }

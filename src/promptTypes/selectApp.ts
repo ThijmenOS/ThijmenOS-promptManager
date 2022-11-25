@@ -1,7 +1,7 @@
 import {
   CreateElementFromString,
   GetElementByClass,
-} from "@thijmenos/graphics";
+} from "@thijmen-os/graphics";
 import BasePrompt from "../basePrompt";
 
 class SelectAppPrompt extends BasePrompt {
