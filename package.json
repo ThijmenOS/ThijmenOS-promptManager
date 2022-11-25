@@ -1,6 +1,6 @@
 {
-  "name": "@thijmenos/prompt",
-  "version": "1.0.8",
+  "name": "@thijmen-os/prompt",
+  "version": "1.0.0",
   "description": "a module for the thijmenos project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
