@@ -20,7 +20,7 @@
   "dependencies": {
     "@thijmen-os/common": "^1.0.2",
     "@thijmen-os/eslint-config": "^1.0.0",
-    "@thijmen-os/graphics": "^1.0.1",
+    "@thijmen-os/graphics": "^2.0.3",
     "@thijmen-os/utils": "^1.0.1"
   },
   "devDependencies": {
