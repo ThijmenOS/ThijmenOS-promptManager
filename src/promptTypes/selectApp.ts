@@ -2,7 +2,7 @@ import {
   CreateElementFromString,
   GetElementByClass,
 } from "@thijmen-os/graphics";
-import BasePrompt from "../basePrompt";
+import BasePrompt from "../prompt";
 
 class SelectAppPrompt extends BasePrompt {
   constructor(content: Array<string>, handler: (a: string) => void) {
@@ -28,7 +28,6 @@ class SelectAppPrompt extends BasePrompt {
     });
 
     this.Render();
-    this.AllowOutsideClickToClose();
     this.AllowPromptToBeClosed();
   }
 }

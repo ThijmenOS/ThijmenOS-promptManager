@@ -1,5 +1,5 @@
 import { CreateElementFromString } from "@thijmen-os/graphics";
-import BasePrompt from "../basePrompt";
+import BasePrompt from "../prompt";
 
 class NoAppForFiletype extends BasePrompt {
   constructor() {
