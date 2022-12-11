@@ -4,8 +4,8 @@ import {
   GetElementByClass,
   InitMovement,
 } from "@thijmen-os/graphics";
-import { GenerateUUID } from "@thijmen-os/utils";
 import { promptSelectors, prompt } from "../defaults";
+import GenerateUUID from "./generateUUID";
 
 class Prompt {
   protected promptElement!: HTMLElement;
