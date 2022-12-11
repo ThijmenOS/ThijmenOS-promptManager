@@ -5,9 +5,9 @@ import {
   InitMovement,
 } from "@thijmen-os/graphics";
 import { GenerateUUID } from "@thijmen-os/utils";
-import { promptSelectors, prompt } from "./defaults";
+import { promptSelectors, prompt } from "../defaults";
 
-class BasePrompt {
+class Prompt {
   protected promptElement!: HTMLElement;
   protected promptBody!: HTMLDivElement;
   protected promptIdentifier!: string;
@@ -20,8 +20,6 @@ class BasePrompt {
 
   protected Close(): void {
     this.promptElement.remove();
-
-    window.removeEventListener("click", this.click);
   }
 
   protected SetHeader(headerContent: string, subHeaderContent?: string) {
@@ -54,12 +52,6 @@ class BasePrompt {
     InitMovement(this.promptIdentifier);
   }
 
-  protected click = (ev: MouseEvent) => this.CloseByClickOutside(ev);
-
-  protected AllowOutsideClickToClose() {
-    window.addEventListener("click", this.click);
-  }
-
   protected AllowPromptToBeClosed() {
     const closePrompt = GetElementByClass<HTMLDivElement>(
       this.promptElement,
@@ -68,12 +60,6 @@ class BasePrompt {
 
     closePrompt.addEventListener("click", () => this.Close());
   }
-
-  protected CloseByClickOutside(ev: MouseEvent) {
-    if (!ev.composedPath().includes(this.promptElement)) {
-      this.Close();
-    }
-  }
 }
 
-export default BasePrompt;
+export default Prompt;
