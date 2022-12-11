@@ -2,9 +2,9 @@ import {
   CreateElementFromString,
   GetElementByClass,
 } from "@thijmen-os/graphics";
-import BasePrompt from "../prompt";
+import Prompt from "./prompt";
 
-class SelectAppPrompt extends BasePrompt {
+class SelectAppPrompt extends Prompt {
   constructor(content: Array<string>, handler: (a: string) => void) {
     super();
 
