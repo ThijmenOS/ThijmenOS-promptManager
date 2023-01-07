@@ -1,6 +1,6 @@
 {
   "name": "@thijmen-os/prompt",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "a module for the thijmen-os project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
   "author": "Thijmen Brand",
   "license": "ISC",
   "dependencies": {
-    "@thijmen-os/common": "^1.0.2",
+    "@thijmen-os/common": "^2.0.15",
     "@thijmen-os/eslint-config": "^1.0.0",
     "@thijmen-os/graphics": "^2.0.3"
   },

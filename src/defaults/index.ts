@@ -6,7 +6,13 @@ export const promptSelectors = {
   promptSubHeader: "javascript-os-prompt-sub-header",
   promptBody: "javascript-os-prompt-body",
   promptFooter: "javascript-os-prompt-footer",
+  promptButton: "thijmenos-prompt-button",
 };
+
+export enum promptFooterActions {
+  Allow = "allow",
+  Deny = "deny",
+}
 
 export const prompt = `<div class="${promptSelectors.promptMessage}">
               <span>
@@ -19,3 +25,12 @@ export const prompt = `<div class="${promptSelectors.promptMessage}">
               <div class="${promptSelectors.promptBody}"></div>
               <span class="${promptSelectors.promptFooter}"></span>
             </div>`;
+
+const allowDenyFooter = `<span class='footer-wrapper'>
+              <p class="allow-button ${promptSelectors.promptButton}" data-action="${promptFooterActions.Allow}">allow</p>
+              <p class="deny-button ${promptSelectors.promptButton}" data-action="${promptFooterActions.Deny}">deny</p>
+            </span>`;
+
+export const promptFooters = {
+  allowDenyFooter: allowDenyFooter,
+};
