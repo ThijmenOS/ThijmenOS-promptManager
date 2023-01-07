@@ -44,6 +44,13 @@ class Prompt {
     AddElement(content, this.promptBody);
   }
 
+  protected SetFooter(content: string) {
+    GetElementByClass<HTMLSpanElement>(
+      this.promptElement,
+      promptSelectors.promptFooter
+    ).innerHTML = CreateElementFromString(content);
+  }
+
   protected Render(): void {
     AddElement(this.promptElement);
   }
