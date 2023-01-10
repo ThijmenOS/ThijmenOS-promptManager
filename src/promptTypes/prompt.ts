@@ -45,10 +45,15 @@ class Prompt {
   }
 
   protected SetFooter(content: string) {
-    GetElementByClass<HTMLSpanElement>(
+    const footerElement = GetElementByClass<HTMLSpanElement>(
       this.promptElement,
       promptSelectors.promptFooter
-    ).innerHTML = CreateElementFromString(content);
+    );
+
+    AddElement(
+      CreateElementFromString<HTMLSpanElement>(content),
+      footerElement
+    );
   }
 
   protected Render(): void {
