@@ -39,7 +39,6 @@ class GrantPermission extends Prompt {
 
     this.Render();
     this.InitMovement();
-    this.AllowPromptToBeClosed();
   }
 
   private onclick = (ev: Event) => this.Click(ev);
@@ -54,9 +53,13 @@ class GrantPermission extends Prompt {
         "data-action"
       ) as promptFooterActions;
 
-      if (action === promptFooterActions.Allow)
+      if (action === promptFooterActions.Allow) {
         this.promptCallback(true, this.props);
-      else this.promptCallback(false);
+        this.Close();
+      } else {
+        this.promptCallback(false);
+        this.Close();
+      }
     }
   }
 }
