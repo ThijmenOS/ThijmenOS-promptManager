@@ -25,7 +25,11 @@ class GrantPermission extends Prompt {
     );
 
     this.SetBody(bodyMessageHtml);
-    this.SetFooter(promptFooters.allowDenyFooter);
+
+    const footerHtml = CreateElementFromString<HTMLSpanElement>(
+      promptFooters.allowDenyFooter
+    );
+    this.SetFooter(footerHtml);
 
     this.promptElement.addEventListener("click", this.onclick);
 
