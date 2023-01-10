@@ -1,6 +1,6 @@
 import { CreateElementFromString } from "@thijmen-os/graphics";
 import Prompt from "./prompt";
-import { Permissions } from "@thijmen-os/common";
+import { PermissionRequestDto, Permissions } from "@thijmen-os/common";
 import {
   promptFooterActions,
   promptFooters,
@@ -8,15 +8,22 @@ import {
 } from "../defaults";
 
 class GrantPermission extends Prompt {
-  promptCallback: (res: boolean) => any;
+  promptCallback: (
+    res: boolean,
+    applicationDetails?: PermissionRequestDto
+  ) => any;
+
+  props: PermissionRequestDto;
 
   constructor(
     permission: Permissions,
+    applicationId: string,
     applicationName: string,
-    callback: (res: boolean) => any
+    callback: (res: boolean, applicationDetails?: PermissionRequestDto) => any
   ) {
     super();
 
+    this.props = { applicationId: applicationId, permission: permission };
     this.promptCallback = callback;
 
     this.SetHeader("Permission request");
@@ -47,7 +54,8 @@ class GrantPermission extends Prompt {
         "data-action"
       ) as promptFooterActions;
 
-      if (action === promptFooterActions.Allow) this.promptCallback(true);
+      if (action === promptFooterActions.Allow)
+        this.promptCallback(true, this.props);
       else this.promptCallback(false);
     }
   }
